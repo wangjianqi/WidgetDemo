@@ -45,6 +45,7 @@
         return;
     }
     
+    ///保存到本地，让Widget读取
     NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.japho.widgetDemo"];
     [userDefaults setObject:self.textField.text forKey:@"widget"];
     [userDefaults synchronize];

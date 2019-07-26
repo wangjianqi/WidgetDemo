@@ -32,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    ///可展开
     if (isIOS10)
     {
         self.extensionContext.widgetLargestAvailableDisplayMode = NCWidgetDisplayModeExpanded;
@@ -60,7 +61,7 @@
 - (void)redButtonPressed:(UIButton *)button
 {
     NSLog(@"%s",__func__);
-    
+    ///跳转
     NSURL *url = [NSURL URLWithString:@"WidgetDemo://red"];
     
     [self.extensionContext openURL:url completionHandler:^(BOOL success) {
